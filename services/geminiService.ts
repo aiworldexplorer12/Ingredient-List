@@ -2,7 +2,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Recipe } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// The API key is obtained directly from the environment
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const RECIPE_SCHEMA = {
   type: Type.OBJECT,
